@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="CherishOS-lava"
+           fetch="https://github.com/CherishOS-lava"
+           revision="12.1"/>
+
+ <!-- Device Trees -->
+  <project path="device/xiaomi/lava" name="device_xiaomi_lava" remote="CherishOS-lava"/>
+  <project path="device/xiaomi/mt6768-common" name="device_xiaomi_mt6768-common" remote="CherishOS-lava"/>
+ 
+ <!-- Kernel -->
+  <project path="kernel/xiaomi/mt6768" name="Redmi-MT6768/android_kernel_xiaomi_mt6768" remote="github" revision="twelve"/>
+
+ <!-- Vendor Trees -->
+  <project path="vendor/xiaomi/lava" name="vendor_xiaomi_lava" remote="CherishOS_lava"/>
+  
+ <!-- Extras -->
+  <project path="device/mediatek/sepolicy_vndr" name="6768Team/android_device_mediatek_sepolicy_vndr" remote="github" revision="lineage-19.1-S"/>
+
+  <project path="external/tinyxml" name="ArrowOS/android_external_tinyxml" remote="github" revision="arrow-12.0"/>
+
+  <project path="hardware/mediatek" name="nashc-dev/android_hardware_mediatek" remote="github" revision="lineage-19.1"/>
+
+  <remove-project name="android_frameworks_opt_telephony" path="frameworks/opt/telephony"/>
+  <project path="frameworks/opt/telephony" name="PixelExperience/frameworks_opt_telephony" remote="github" revision="twelve"/>
+  
+  <remove-project name="android_frameworks_opt_net_ims"  path="frameworks/opt/net/ims"/>
+  <project path="frameworks/opt/net/ims" name="PixelExperience/frameworks_opt_net_ims" remote="github" revision="twelve"/>
+
+</manifest>
